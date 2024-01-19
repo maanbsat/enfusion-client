@@ -1,0 +1,24 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[project]
+name =  "enfusion-client"
+authors = [
+    {name = "Maan Bsat", email = "maan.bsat@enfusion.com"},
+]
+description = "A sample python library for accessing the Enfusion Systematic API"
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = [
+    "requests",
+    "pandas",
+]
+
+[project.optional-dependencies]
+test = [
+    "python-dotenv",
+]
+
+[tool.flit.module]
+name = "enfusion_client"
